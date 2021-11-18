@@ -1,4 +1,5 @@
 import React from "react";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
@@ -7,26 +8,40 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
 import Profile from "./components/pages/Profile";
 import Layout from "./components/Layout";
+import { blueGrey, deepOrange } from "@mui/material/colors";
+import Login from "./components/pages/Login";
+import Signup from "./components/pages/Signup";
+
+const theme = createTheme({
+  palette: {
+    primary: blueGrey,
+    secondary: deepOrange,
+  },
+});
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/" element={<Layout />}>
-          <Route path="Home" element={<Home />} />
-          <Route path="Profile" element={<Profile />} />
-        </Route>
-        <Route
-          path="*"
-          element={
-            <main>
-              <p>There's nothing here!</p>
-            </main>
-          }
-        />
-      </Routes>
-    </HashRouter>
+    <ThemeProvider theme={theme}>
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/" element={<Layout />}>
+            <Route path="Home" element={<Home />} />
+            <Route path="Profile" element={<Profile />} />
+          </Route>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route
+            path="*"
+            element={
+              <main>
+                <p>There's nothing here!</p>
+              </main>
+            }
+          />
+        </Routes>
+      </HashRouter>
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

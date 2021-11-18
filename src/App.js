@@ -1,21 +1,20 @@
 import "./App.css";
 import React from "react";
-import { Link } from "react-router-dom";
-// import Routes from "./components/Routes";
+import Box from "@mui/material/Box";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+import TopbarLandingPage from "./components/TopbarLandingPage";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <div>
-      <h1>Landing Page</h1>
-      <nav
-        style={{
-          borderBottom: "solid 1px",
-          paddingBottom: "1rem",
-        }}
-      >
-        <Link to="/">LandingPage</Link> | <Link to="/Home">Home</Link> |{" "}
-        <Link to="/Profile">Profile</Link>
-      </nav>
-    </div>
+    <Box>
+      <Footer>
+        <TopbarLandingPage />
+        <Container>
+          <Typography>Content...</Typography>
+        </Container>
+      </Footer>
+    </Box>
   );
 }
