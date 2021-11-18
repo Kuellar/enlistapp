@@ -16,15 +16,15 @@ ReactDOM.render(
         <Route path="/" element={<Layout />}>
           <Route path="Home" element={<Home />} />
           <Route path="Profile" element={<Profile />} />
-          <Route
-            path="*"
-            element={
-              <main style={{ padding: "1rem" }}>
-                <p>There's nothing here!</p>
-              </main>
-            }
-          />
         </Route>
+        <Route
+          path="*"
+          element={
+            <main>
+              <p>There's nothing here!</p>
+            </main>
+          }
+        />
       </Routes>
     </HashRouter>
   </React.StrictMode>,
