@@ -2,9 +2,9 @@ import React from "react";
 import { useTheme } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import HomeIcon from "@mui/icons-material/Home";
+import GroupIcon from "@mui/icons-material/Group";
 
-const Home = () => {
+const Friends = () => {
   const theme = useTheme();
   return (
     <Box>
@@ -17,9 +17,9 @@ const Home = () => {
           color: "white",
         }}
       >
-        <HomeIcon fontSize="large" sx={{ ml: 3 }} />
+        <GroupIcon fontSize="large" sx={{ ml: 3 }} />
         <Typography variant="h5" component="h2" sx={{ ml: 1 }}>
-          Home
+          Friends list
         </Typography>
       </Box>
 
@@ -29,4 +29,4 @@ const Home = () => {
     </Box>
   );
 };
-export default Home;
+export default Friends;

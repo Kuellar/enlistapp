@@ -6,6 +6,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/pages/Home";
+import Friends from "./components/pages/Friends";
 import Profile from "./components/pages/Profile";
 import Layout from "./components/Layout";
 import { blueGrey, deepOrange } from "@mui/material/colors";
@@ -26,8 +27,9 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/" element={<Layout />}>
-            <Route path="Home" element={<Home />} />
-            <Route path="Profile" element={<Profile />} />
+            <Route path="home" element={<Home />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="friends" element={<Friends />} />
           </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />

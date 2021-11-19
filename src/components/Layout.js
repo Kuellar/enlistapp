@@ -1,9 +1,12 @@
 import React from "react";
 import Drawer from "@mui/material/Drawer";
-// import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
 import { Outlet } from "react-router";
 import Menu from "./Menu";
 import Topbar from "./Topbar";
+import { grey } from "@mui/material/colors";
+import Footer from "./Footer";
 
 const Layout = () => {
   const [open, setOpen] = React.useState(false);
@@ -21,11 +24,24 @@ const Layout = () => {
   return (
     <div>
       <React.Fragment key={"left"}>
-        <Topbar menuHandler={toggleDrawer} />
-        <Outlet />
-        <Drawer anchor="left" open={open} onClose={toggleDrawer(false)}>
-          <Menu setOpen={setOpen} />
-        </Drawer>
+        <Footer>
+          <Topbar menuHandler={toggleDrawer} />
+          <Grid container sx={{ backgroundColor: grey[200], height: "87vh" }}>
+            <Grid item sm={1} md={2} />
+            <Grid item xs={12} sm={10} md={8}>
+              <Box
+                component="main"
+                sx={{ backgroundColor: "white", height: "87vh" }}
+              >
+                <Outlet />
+              </Box>
+            </Grid>
+            <Grid item sm={1} md={2} />
+          </Grid>
+          <Drawer anchor="left" open={open} onClose={toggleDrawer(false)}>
+            <Menu setOpen={setOpen} />
+          </Drawer>
+        </Footer>
       </React.Fragment>
     </div>
   );
