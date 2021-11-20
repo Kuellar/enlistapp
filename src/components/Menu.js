@@ -13,17 +13,17 @@ import EventIcon from "@mui/icons-material/Event";
 
 const menuItems = [
   {
-    name: "Events",
+    name: "Eventos",
     icon: <EventIcon />,
     link: "/events",
   },
   {
-    name: "Friends",
+    name: "Amigos",
     icon: <GroupIcon />,
     link: "/friends",
   },
   {
-    name: "Profile",
+    name: "Perfil",
     icon: <PersonIcon />,
     link: "/profile",
   },

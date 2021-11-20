@@ -35,7 +35,7 @@ const Profile = () => {
       >
         <AccountCircleIcon fontSize="large" sx={{ ml: 3 }} />
         <Typography variant="h5" component="h2" sx={{ ml: 1 }}>
-          Profile
+          Perfil
         </Typography>
       </Box>
 
