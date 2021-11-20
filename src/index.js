@@ -5,7 +5,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { HashRouter, Routes, Route } from "react-router-dom";
-import Home from "./components/pages/Home";
+import Events from "./components/pages/Events";
 import Friends from "./components/pages/Friends";
 import Profile from "./components/pages/Profile";
 import Layout from "./components/Layout";
@@ -27,7 +27,7 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/" element={<Layout />}>
-            <Route path="home" element={<Home />} />
+            <Route path="events" element={<Events />} />
             <Route path="profile" element={<Profile />} />
             <Route path="friends" element={<Friends />} />
           </Route>

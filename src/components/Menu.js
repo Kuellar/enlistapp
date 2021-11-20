@@ -4,18 +4,18 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import HomeIcon from "@mui/icons-material/Home";
 import GroupIcon from "@mui/icons-material/Group";
 import PersonIcon from "@mui/icons-material/Person";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { NavLink } from "react-router-dom";
 import Divider from "@mui/material/Divider";
+import EventIcon from "@mui/icons-material/Event";
 
 const menuItems = [
   {
-    name: "Home",
-    icon: <HomeIcon />,
-    link: "/home",
+    name: "Events",
+    icon: <EventIcon />,
+    link: "/events",
   },
   {
     name: "Friends",

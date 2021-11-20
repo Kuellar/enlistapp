@@ -26,7 +26,7 @@ const Signup = () => {
           alignItems: "center",
         }}
       >
-        <Link to="/" >
+        <Link to="/">
           <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
             <img src={Logo} alt="Logo" width="40" height="40" />
           </Avatar>
@@ -90,7 +90,7 @@ const Signup = () => {
               />
             </Grid>
           </Grid>
-          <Link to="/home" style={{ textDecoration: "none", color: "black" }}>
+          <Link to="/events" style={{ textDecoration: "none", color: "black" }}>
             <Button
               // type="submit"
               fullWidth
