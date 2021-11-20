@@ -22,7 +22,7 @@ const TopbarLandingPage = () => {
             <img src={Logo} alt="Logo" width="50" height="50" />
           </Link>
         </Box>
-        <Link to="/login">
+        <Link to="/login" style={{ textDecoration: "none", color: "black" }}>
           <Button
             color="inherit"
             variant="text"
@@ -37,7 +37,7 @@ const TopbarLandingPage = () => {
             Log in
           </Button>
         </Link>
-        <Link to="/signup">
+        <Link to="/signup" style={{ textDecoration: "none", color: "black" }}>
           <Button
             color="inherit"
             variant="contained"
