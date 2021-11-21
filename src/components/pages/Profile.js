@@ -136,7 +136,7 @@ const Profile = () => {
                   </ListItemAvatar>
                   <ListItemText
                     primary="Pase de movilidad"
-                    secondary="20/11/2021"
+                    secondary="Sí"
                     secondaryTypographyProps={{
                       color: theme.palette.primary.dark,
                       paddingLeft: 2,
@@ -153,8 +153,8 @@ const Profile = () => {
                     </Avatar>
                   </ListItemAvatar>
                   <ListItemText
-                    primary="Resultado"
-                    secondary="Negativo"
+                    primary="Ultimo PCR"
+                    secondary="12/11/2021 - Negativo"
                     secondaryTypographyProps={{
                       color: theme.palette.primary.dark,
                       paddingLeft: 2,

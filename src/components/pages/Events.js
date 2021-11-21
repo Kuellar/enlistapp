@@ -10,6 +10,12 @@ import AppBar from "@mui/material/AppBar";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 
+import List from "@mui/material/List";
+import Event from "../Event";
+import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
+import SportsVolleyballIcon from "@mui/icons-material/SportsVolleyball";
+import Divider from "@mui/material/Divider";
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -75,8 +81,8 @@ const Events = () => {
       <Box
         sx={{
           pt: { xs: 0, sm: 2 },
-          pl: { sm: 2, md: 4, lg: 6, xl: 10 },
-          pr: { sm: 2, md: 4, lg: 6, xl: 10 },
+          pl: { sm: 5, md: 10, lg: 15, xl: 30 },
+          pr: { sm: 5, md: 10, lg: 15, xl: 30 },
         }}
       >
         <AppBar position="static">
@@ -99,13 +105,61 @@ const Events = () => {
             style={{ backgroundColor: "white", color: "black" }}
           >
             <TabPanel value={value} index={0}>
-              <Box sx={{ height: 300 }}>Tus eventos</Box>
+              <List>
+                <Event
+                  primary="Partido"
+                  secondary="21/11/2021"
+                  icon={<SportsVolleyballIcon />}
+                  from="21:00"
+                  to="22:00"
+                />
+                <Divider />
+                <Event
+                  primary="Bingo familiar"
+                  secondary="22/11/2021"
+                  icon={<FamilyRestroomIcon />}
+                  from="21:00"
+                  to="22:00"
+                />
+              </List>
             </TabPanel>
             <TabPanel value={value} index={1}>
-              <Box sx={{ height: 300 }}>Próximos</Box>
+              <List>
+                <Event
+                  primary="Partido"
+                  secondary="21/11/2021"
+                  icon={<SportsVolleyballIcon />}
+                  from="21:00"
+                  to="22:00"
+                />
+                <Divider />
+                <Event
+                  primary="Bingo familiar"
+                  secondary="22/11/2021"
+                  icon={<FamilyRestroomIcon />}
+                  from="21:00"
+                  to="22:00"
+                />
+              </List>
             </TabPanel>
             <TabPanel value={value} index={2}>
-              <Box sx={{ height: 300 }}>Archivados</Box>
+              <List>
+                <Event
+                  primary="Partido"
+                  secondary="21/11/2021"
+                  icon={<SportsVolleyballIcon />}
+                  from="21:00"
+                  to="22:00"
+                />
+                <Divider />
+                <Event
+                  primary="Bingo familiar"
+                  secondary="22/11/2021"
+                  icon={<FamilyRestroomIcon />}
+                  from="21:00"
+                  to="22:00"
+                />
+              </List>
             </TabPanel>
           </SwipeableViews>
         </AppBar>
