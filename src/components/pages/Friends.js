@@ -23,7 +23,7 @@ const Friends = () => {
       >
         <GroupIcon fontSize="large" sx={{ ml: 3 }} />
         <Typography variant="h5" component="h2" sx={{ ml: 1 }}>
-          Friends list
+          Lista de amigos
         </Typography>
       </Box>
 

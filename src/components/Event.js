@@ -17,7 +17,6 @@ const Event = ({ primary, secondary, icon, from, to }) => {
         secondary={secondary}
         secondaryTypographyProps={{
           color: theme.palette.primary.dark,
-          paddingLeft: 2,
         }}
       />
       <ListItemText

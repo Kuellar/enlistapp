@@ -32,7 +32,7 @@ const Signup = () => {
           </Avatar>
         </Link>
         <Typography component="h1" variant="h5">
-          Sign up
+          Registro
         </Typography>
         <Box
           component="form"
@@ -48,7 +48,7 @@ const Signup = () => {
                 required
                 fullWidth
                 id="firstName"
-                label="First Name"
+                label="Nombre"
                 autoFocus
               />
             </Grid>
@@ -57,7 +57,7 @@ const Signup = () => {
                 required
                 fullWidth
                 id="lastName"
-                label="Last Name"
+                label="Apellido"
                 name="lastName"
                 autoComplete="family-name"
               />
@@ -67,7 +67,7 @@ const Signup = () => {
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
+                label="Correo electrónico"
                 name="email"
                 autoComplete="email"
               />
@@ -77,7 +77,7 @@ const Signup = () => {
                 required
                 fullWidth
                 name="password"
-                label="Password"
+                label="Contraseña"
                 type="password"
                 id="password"
                 autoComplete="new-password"
@@ -86,7 +86,7 @@ const Signup = () => {
             <Grid item xs={12}>
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}
-                label="I want to receive inspiration, marketing promotions and updates via email."
+                label="Quiero recibir promociones de marketing y actualizaciones por correo electrónico."
               />
             </Grid>
           </Grid>
@@ -97,14 +97,14 @@ const Signup = () => {
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Sign Up
+              Regístrate
             </Button>
           </Link>
           <Grid container justifyContent="flex-end">
             <Grid item>
               <Link to="/login">
                 <LinkMui href="#" variant="body2">
-                  Already have an account? Sign in
+                  ¿Ya tiene una cuenta? Iniciar sesión
                 </LinkMui>
               </Link>
             </Grid>

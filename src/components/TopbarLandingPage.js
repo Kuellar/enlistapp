@@ -34,7 +34,7 @@ const TopbarLandingPage = () => {
               color: theme.palette.text.secondary,
             }}
           >
-            Log in
+            Iniciar sesión
           </Button>
         </Link>
         <Link to="/signup" style={{ textDecoration: "none", color: "black" }}>
@@ -48,7 +48,7 @@ const TopbarLandingPage = () => {
               color: theme.palette.text.primary,
             }}
           >
-            Sign up
+            Regístrate
           </Button>
         </Link>
       </Toolbar>
