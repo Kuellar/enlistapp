@@ -14,7 +14,6 @@ import List from "@mui/material/List";
 import Event from "../Event";
 import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
 import SportsVolleyballIcon from "@mui/icons-material/SportsVolleyball";
-import Divider from "@mui/material/Divider";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -102,7 +101,7 @@ const Events = () => {
             axis={theme.direction === "rtl" ? "x-reverse" : "x"}
             index={value}
             onChangeIndex={handleChangeIndex}
-            style={{ backgroundColor: "white", color: "black" }}
+            style={{ backgroundColor: "white", color: "black", height: "75vh" }}
           >
             <TabPanel value={value} index={0}>
               <List>
@@ -113,7 +112,6 @@ const Events = () => {
                   from="21:00"
                   to="22:00"
                 />
-                <Divider />
                 <Event
                   primary="Bingo familiar"
                   secondary="22/11/2021"
@@ -132,7 +130,6 @@ const Events = () => {
                   from="21:00"
                   to="22:00"
                 />
-                <Divider />
                 <Event
                   primary="Bingo familiar"
                   secondary="22/11/2021"
@@ -151,7 +148,6 @@ const Events = () => {
                   from="21:00"
                   to="22:00"
                 />
-                <Divider />
                 <Event
                   primary="Bingo familiar"
                   secondary="22/11/2021"
