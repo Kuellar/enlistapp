@@ -23,14 +23,14 @@ const MenuTopbar = ({ anchorEl, menuId, isOpen, closeHandler }) => {
           <ListItemIcon>
             <PersonIcon fontSize="small" />
           </ListItemIcon>
-          <ListItemText>Profile</ListItemText>
+          <ListItemText>Perfil</ListItemText>
         </MenuItem>
       </NavLink>
       <MenuItem onClick={closeHandler}>
         <ListItemIcon>
           <SettingsIcon fontSize="small" />
         </ListItemIcon>
-        <ListItemText>Settings</ListItemText>
+        <ListItemText>Configuración</ListItemText>
       </MenuItem>
       <Divider />
       <NavLink to="/" style={{ textDecoration: "none", color: "black" }}>
@@ -38,7 +38,7 @@ const MenuTopbar = ({ anchorEl, menuId, isOpen, closeHandler }) => {
           <ListItemIcon>
             <LogoutIcon fontSize="small" />
           </ListItemIcon>
-          <ListItemText>Logout</ListItemText>
+          <ListItemText>Cerrar sesión</ListItemText>
         </MenuItem>
       </NavLink>
     </Menu>
