@@ -71,7 +71,7 @@ const Menu = ({ setOpen }) => {
             <ListItemIcon>
               <LogoutIcon />
             </ListItemIcon>
-            <ListItemText primary="Logout" />
+            <ListItemText primary="Cerrar sesión" />
           </ListItem>
         </NavLink>
       </List>
