@@ -8,6 +8,7 @@ import CardMedia from "@mui/material/CardMedia";
 import IconButton from "@mui/material/IconButton";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import FotoPerfil from "../images/FotoPerfil.png";
+import { NavLink } from "react-router-dom";
 
 const Friend = ({ name, username }) => {
   const theme = useTheme();
@@ -28,9 +29,11 @@ const Friend = ({ name, username }) => {
         </Typography>
       </CardContent>
       <CardActions sx={{ float: "right", mt: -5 }}>
-        <IconButton>
-          <MoreHorizIcon />
-        </IconButton>
+        <NavLink to="/friend">
+          <IconButton>
+            <MoreHorizIcon />
+          </IconButton>
+        </NavLink>
       </CardActions>
     </Card>
   );

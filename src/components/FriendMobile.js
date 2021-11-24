@@ -6,15 +6,18 @@ import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import FotoPerfil from "../images/FotoPerfil.png";
+import { NavLink } from "react-router-dom";
 
 const FriendMobile = ({ name, username }) => {
   return (
     <Fragment>
       <ListItem
         secondaryAction={
-          <IconButton edge="end" aria-label="more">
-            <MoreHorizIcon />
-          </IconButton>
+          <NavLink to="/friend">
+            <IconButton edge="end" aria-label="more">
+              <MoreHorizIcon />
+            </IconButton>
+          </NavLink>
         }
         divider={true}
       >

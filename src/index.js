@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Events from "./components/pages/Events";
 import Friends from "./components/pages/Friends";
+import FriendProfile from "./components/pages/FriendProfile";
 import Profile from "./components/pages/Profile";
 import Layout from "./components/Layout";
 import { blueGrey, deepOrange } from "@mui/material/colors";
@@ -30,6 +31,7 @@ ReactDOM.render(
             <Route path="events" element={<Events />} />
             <Route path="profile" element={<Profile />} />
             <Route path="friends" element={<Friends />} />
+            <Route path="friend" element={<FriendProfile />} />
           </Route>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />

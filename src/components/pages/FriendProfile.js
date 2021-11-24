@@ -7,18 +7,13 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import FotoPerfil from "../../images/FotoPerfil.png";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import EditIcon from "@mui/icons-material/Edit";
 import Title from "../Title";
 import ProfileInfo from "../ProfileInfo";
 
-const Profile = () => {
+const FriendProfile = () => {
   return (
     <Box>
-      <Title
-        Title="Perfil"
-        titleIcon={AccountCircleIcon}
-        actionIcon={EditIcon}
-      />
+      <Title Title="Amigo" titleIcon={AccountCircleIcon} />
 
       <Box sx={{ p: { xs: 0, sm: 1, md: 2 } }}>
         <Grid container>
@@ -48,7 +43,7 @@ const Profile = () => {
               />
               <CardContent>
                 <Typography variant="body1" sx={{ textAlign: "center" }}>
-                  @ignacio.cuellar
+                  @Juan.Pedro
                 </Typography>
               </CardContent>
             </Card>
@@ -66,8 +61,8 @@ const Profile = () => {
             }}
           >
             <ProfileInfo
-              name="Ignacio Cuellar"
-              mail="ignaciocuellar@gmail.com"
+              name="Juan Rodriguez"
+              mail="juan.rodriguez@gmail.com"
               pase="Sí"
               pcr="12/11/2021 - Negativo"
             />
@@ -77,4 +72,4 @@ const Profile = () => {
     </Box>
   );
 };
-export default Profile;
+export default FriendProfile;
