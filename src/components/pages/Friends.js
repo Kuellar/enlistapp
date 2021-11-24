@@ -1,5 +1,4 @@
 import React from "react";
-import { useTheme } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
@@ -8,68 +7,60 @@ import SearchIcon from "@mui/icons-material/Search";
 import InputIcon from "../InputIcon";
 import FriendsListMobile from "../FriendsListMobile";
 import FriendsList from "../FriendsList";
+import Title from "../Title";
+import AddIcon from "@mui/icons-material/Add";
 
 const FriendsListData = [
   {
     name: "Juan",
-    username: "@Juan",
+    username: "@Juan1",
   },
   {
     name: "Pedro",
-    username: "@Pedro",
+    username: "@Pedro1",
   },
   {
     name: "Marcelo",
-    username: "@Marcelo",
+    username: "@Marcelo1",
   },
   {
     name: "Juan",
-    username: "@Juan",
+    username: "@Juan2",
   },
   {
     name: "Pedro",
-    username: "@Pedro",
+    username: "@Pedro2",
   },
   {
     name: "Marcelo",
-    username: "@Marcelo",
+    username: "@Marcelo2",
   },
   {
     name: "Juan",
-    username: "@Juan",
+    username: "@Juan3",
   },
   {
     name: "Pedro",
-    username: "@Pedro",
+    username: "@Pedro3",
   },
   {
     name: "Marcelo",
-    username: "@Marcelo",
+    username: "@Marcelo3",
   },
   {
     name: "Juan",
-    username: "@Juan",
+    username: "@Juan4",
   },
 ];
 
 const Friends = () => {
-  const theme = useTheme();
   return (
     <Box>
-      <Box
-        sx={{
-          height: 60,
-          backgroundColor: theme.palette.primary.dark,
-          display: "flex",
-          alignItems: "center",
-          color: "white",
-        }}
-      >
-        <GroupIcon fontSize="large" sx={{ ml: 3 }} />
-        <Typography variant="h5" component="h2" sx={{ ml: 1 }}>
-          Lista de amigos
-        </Typography>
-      </Box>
+      <Title
+        Title="Lista de amigos"
+        titleIcon={GroupIcon}
+        actionIcon={AddIcon}
+      />
 
       <Box sx={{ pt: 1, px: { xs: 1, sm: 3, md: 5, lg: 10 } }}>
         <Grid container>

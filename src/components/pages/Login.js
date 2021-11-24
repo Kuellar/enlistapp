@@ -77,11 +77,9 @@ const Login = () => {
               <LinkMui variant="body2">¿Olvidaste tu contraseña?</LinkMui>
             </Grid>
             <Grid item>
-              <Link to="/signup">
-                <LinkMui variant="body2">
-                  "¿No tienes una cuenta? Regístrate"
-                </LinkMui>
-              </Link>
+              <LinkMui href="#/signup" variant="body2">
+                "¿No tienes una cuenta? Regístrate"
+              </LinkMui>
             </Grid>
           </Grid>
         </Box>

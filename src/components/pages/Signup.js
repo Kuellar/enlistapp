@@ -102,11 +102,9 @@ const Signup = () => {
           </Link>
           <Grid container justifyContent="flex-end">
             <Grid item>
-              <Link to="/login">
-                <LinkMui href="#" variant="body2">
-                  ¿Ya tiene una cuenta? Iniciar sesión
-                </LinkMui>
-              </Link>
+              <LinkMui href="#/login" variant="body2">
+                ¿Ya tiene una cuenta? Iniciar sesión
+              </LinkMui>
             </Grid>
           </Grid>
         </Box>

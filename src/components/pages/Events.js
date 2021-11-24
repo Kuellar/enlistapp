@@ -1,8 +1,8 @@
 import React from "react";
 import { useTheme } from "@mui/material/styles";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import EventIcon from "@mui/icons-material/Event";
+import Title from "../Title";
 
 import PropTypes from "prop-types";
 import SwipeableViews from "react-swipeable-views";
@@ -14,6 +14,7 @@ import List from "@mui/material/List";
 import Event from "../Event";
 import FamilyRestroomIcon from "@mui/icons-material/FamilyRestroom";
 import SportsVolleyballIcon from "@mui/icons-material/SportsVolleyball";
+import AddIcon from "@mui/icons-material/Add";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -26,11 +27,7 @@ function TabPanel(props) {
       aria-labelledby={`full-width-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box sx={{ p: 0 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
+      {value === index && <Box sx={{ p: 0 }}>{children}</Box>}
     </Box>
   );
 }
@@ -62,20 +59,7 @@ const Events = () => {
 
   return (
     <Box>
-      <Box
-        sx={{
-          height: 60,
-          backgroundColor: theme.palette.primary.dark,
-          display: "flex",
-          alignItems: "center",
-          color: "white",
-        }}
-      >
-        <EventIcon fontSize="large" sx={{ ml: 3 }} />
-        <Typography variant="h5" component="h2" sx={{ ml: 1 }}>
-          Eventos
-        </Typography>
-      </Box>
+      <Title Title="Eventos" titleIcon={EventIcon} actionIcon={AddIcon} />
 
       <Box
         sx={{

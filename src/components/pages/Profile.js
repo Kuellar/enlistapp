@@ -18,26 +18,19 @@ import PersonIcon from "@mui/icons-material/Person";
 import EmailIcon from "@mui/icons-material/Email";
 import QrCodeIcon from "@mui/icons-material/QrCode";
 import CheckIcon from "@mui/icons-material/Check";
+import EditIcon from "@mui/icons-material/Edit";
+import Title from "../Title";
 
 const Profile = () => {
   const theme = useTheme();
 
   return (
     <Box>
-      <Box
-        sx={{
-          height: 60,
-          backgroundColor: theme.palette.primary.dark,
-          display: "flex",
-          alignItems: "center",
-          color: "white",
-        }}
-      >
-        <AccountCircleIcon fontSize="large" sx={{ ml: 3 }} />
-        <Typography variant="h5" component="h2" sx={{ ml: 1 }}>
-          Perfil
-        </Typography>
-      </Box>
+      <Title
+        Title="Perfil"
+        titleIcon={AccountCircleIcon}
+        actionIcon={EditIcon}
+      />
 
       <Box sx={{ p: { xs: 0, sm: 1, md: 2 } }}>
         <Grid container>

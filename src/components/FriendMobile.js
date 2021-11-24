@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import ListItemAvatar from "@mui/material/ListItemAvatar";
@@ -17,13 +16,13 @@ const FriendMobile = ({ name, username }) => {
             <MoreHorizIcon />
           </IconButton>
         }
+        divider={true}
       >
         <ListItemAvatar>
           <Avatar alt={username + "-photo"} src={FotoPerfil} />
         </ListItemAvatar>
         <ListItemText primary={name} secondary={username} />
       </ListItem>
-      <Divider />
     </Fragment>
   );
 };
