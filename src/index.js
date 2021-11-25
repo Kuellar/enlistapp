@@ -14,6 +14,7 @@ import Layout from "./components/Layout";
 import { blueGrey, deepOrange } from "@mui/material/colors";
 import Login from "./components/pages/Login";
 import Signup from "./components/pages/Signup";
+import CreateEvent from "./components/pages/CreateEvent";
 
 const theme = createTheme({
   palette: {
@@ -31,6 +32,7 @@ ReactDOM.render(
           <Route path="/" element={<Layout />}>
             <Route path="events" element={<Events />} />
             <Route path="event" element={<EventInfo />} />
+            <Route path="event/new" element={<CreateEvent />} />
             <Route path="profile" element={<Profile />} />
             <Route path="friends" element={<Friends />} />
             <Route path="friend" element={<FriendProfile />} />

@@ -59,7 +59,14 @@ const Events = () => {
 
   return (
     <Box>
-      <Title Title="Eventos" titleIcon={EventIcon} actionIcon={AddIcon} />
+      <Title
+        Title="Eventos"
+        titleIcon={EventIcon}
+        actionIcon={AddIcon}
+        actionHandler={() => {
+          window.location.href = "/#/event/new";
+        }}
+      />
 
       <Box
         sx={{
