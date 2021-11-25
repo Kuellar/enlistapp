@@ -6,6 +6,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import Events from "./components/pages/Events";
+import EventInfo from "./components/pages/EventInfo";
 import Friends from "./components/pages/Friends";
 import FriendProfile from "./components/pages/FriendProfile";
 import Profile from "./components/pages/Profile";
@@ -29,6 +30,7 @@ ReactDOM.render(
           <Route path="/" element={<App />} />
           <Route path="/" element={<Layout />}>
             <Route path="events" element={<Events />} />
+            <Route path="event" element={<EventInfo />} />
             <Route path="profile" element={<Profile />} />
             <Route path="friends" element={<Friends />} />
             <Route path="friend" element={<FriendProfile />} />

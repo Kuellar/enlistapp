@@ -5,11 +5,12 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import Avatar from "@mui/material/Avatar";
 import Divider from "@mui/material/Divider";
 import ListItemText from "@mui/material/ListItemText";
+import { NavLink } from "react-router-dom";
 
 const Event = ({ primary, secondary, icon, from, to }) => {
   const theme = useTheme();
   return (
-    <Fragment>
+    <NavLink to="/event" style={{ textDecoration: "none", color: "black" }}>
       <ListItem>
         <ListItemAvatar>
           <Avatar>{icon}</Avatar>
@@ -28,7 +29,7 @@ const Event = ({ primary, secondary, icon, from, to }) => {
         />
       </ListItem>
       <Divider />
-    </Fragment>
+    </NavLink>
   );
 };
 
