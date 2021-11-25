@@ -1,8 +1,4 @@
 import React from "react";
-import Card from "@mui/material/Card";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import FotoPerfil from "../../images/FotoPerfil.png";
@@ -10,6 +6,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import EditIcon from "@mui/icons-material/Edit";
 import Title from "../Title";
 import ProfileInfo from "../ProfileInfo";
+import ProfileCard from "../ProfileCard";
 
 const Profile = () => {
   return (
@@ -33,25 +30,7 @@ const Profile = () => {
               justifyContent: "center",
             }}
           >
-            <Card
-              sx={{
-                width: "100%",
-                maxWidth: 300,
-                margin: "auto",
-              }}
-            >
-              <CardMedia
-                component="img"
-                image={FotoPerfil}
-                alt="Foto perfil"
-                sx={{ maxHeight: 300, maxWidth: 300 }}
-              />
-              <CardContent>
-                <Typography variant="body1" sx={{ textAlign: "center" }}>
-                  @ignacio.cuellar
-                </Typography>
-              </CardContent>
-            </Card>
+            <ProfileCard photo={FotoPerfil} username="ignacio.cuellar" />
           </Grid>
           <Grid
             item
