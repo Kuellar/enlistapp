@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
@@ -54,6 +54,30 @@ const FriendsListData = [
 ];
 
 const Friends = () => {
+  // eslint-disable-next-line
+  const [friends, setFriends] = useState(FriendsListData);
+  const [filter, setFilter] = useState("");
+  const [filteredFriends, setFilteredFriends] = useState([]);
+
+  useEffect(() => {
+    setFilteredFriends([]);
+    if (filter) {
+      var resultFriends = [];
+      friends.forEach((friend) => {
+        if (
+          friend.name?.toLowerCase().includes(filter) ||
+          friend.username?.toLowerCase().includes(filter)
+        ) {
+          resultFriends = resultFriends.concat([friend]);
+        }
+      });
+      setFilteredFriends(resultFriends);
+    } else {
+      setFilteredFriends(friends);
+    }
+    // eslint-disable-next-line
+  }, [filter]);
+
   return (
     <Box>
       <Title
@@ -71,7 +95,7 @@ const Friends = () => {
             sx={{ display: { xs: "none", sm: "inline" } }}
           >
             <Typography variant="h5" component="h2" sx={{ ml: 1, mt: 2 }}>
-              {FriendsListData.length} Amigos
+              {filteredFriends.length} Amigos
             </Typography>
           </Grid>
           <Grid
@@ -88,6 +112,8 @@ const Friends = () => {
               label="Buscar amigo"
               leftIcon={SearchIcon}
               width={{ xs: 800, sm: 200, md: 300 }}
+              handler={setFilter}
+              delay={500}
             />
           </Grid>
           <Grid item xs={12} sm={0}>
@@ -96,15 +122,15 @@ const Friends = () => {
               component="h2"
               sx={{ ml: 1, mt: 2, display: { sm: "none" } }}
             >
-              {FriendsListData.length} Amigos
+              {filteredFriends.length} Amigos
             </Typography>
           </Grid>
         </Grid>
         <Box sx={{ display: { xs: "block", sm: "none" } }}>
-          <FriendsListMobile data={FriendsListData} />
+          <FriendsListMobile data={filteredFriends} />
         </Box>
         <Box sx={{ display: { xs: "none", sm: "block" } }}>
-          <FriendsList data={FriendsListData} />
+          <FriendsList data={filteredFriends} />
         </Box>
       </Box>
     </Box>

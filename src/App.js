@@ -28,7 +28,11 @@ export default function App() {
               style={{ width: "100%", height: "100%" }}
             />
           </Box>
-          <Typography variant="body1" align="center" sx={{ fontSize: 30 }}>
+          <Typography
+            variant="body1"
+            align="center"
+            sx={{ fontSize: { xs: 20, sm: 30 } }}
+          >
             Reunirse con los amigos nunca ha sido tan{" "}
             <TextLoop springConfig={{ stiffness: 180, damping: 12 }}>
               <span style={{ color: "#455a64" }}>fácil</span>

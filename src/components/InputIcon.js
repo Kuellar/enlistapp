@@ -1,11 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Divider from "@mui/material/Divider";
 
-const InputIcon = ({ leftIcon: IconComponent, label, width }) => {
+const InputIcon = ({
+  leftIcon: IconComponent,
+  label,
+  width,
+  handler,
+  delay,
+}) => {
   const theme = useTheme();
+  const [timeoutID, setTimeoutID] = useState(null);
+
+  const setDelay = (value) => {
+    var id = setTimeout(
+      () => {
+        handler(value);
+      },
+      delay ? delay : 0
+    );
+    setTimeoutID(id);
+  };
+
   return (
     <Box
       sx={{
@@ -42,6 +60,10 @@ const InputIcon = ({ leftIcon: IconComponent, label, width }) => {
             color: "primary.contrastText",
             borderBottomColor: "primary.contrastText",
           },
+        }}
+        onChange={(event) => {
+          timeoutID && clearTimeout(timeoutID);
+          setDelay(event.target.value ? event.target.value : "");
         }}
       />
     </Box>
