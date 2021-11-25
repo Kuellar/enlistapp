@@ -65,8 +65,8 @@ const Friends = () => {
       var resultFriends = [];
       friends.forEach((friend) => {
         if (
-          friend.name?.toLowerCase().includes(filter) ||
-          friend.username?.toLowerCase().includes(filter)
+          friend.name?.toLowerCase().includes(filter.toLowerCase()) ||
+          friend.username?.toLowerCase().includes(filter.toLowerCase())
         ) {
           resultFriends = resultFriends.concat([friend]);
         }
