@@ -64,7 +64,7 @@ const Events = () => {
         titleIcon={EventIcon}
         actionIcon={AddIcon}
         actionHandler={() => {
-          window.location.href = "/#/event/new";
+          window.location.href = "enlistapp/#/event/new";
         }}
       />
 
