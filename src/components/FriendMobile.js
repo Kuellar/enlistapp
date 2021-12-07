@@ -8,7 +8,7 @@ import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import FotoPerfil from "../images/FotoPerfil.png";
 import MenuFriend from "./MenuFriend";
 
-const FriendMobile = ({ name, username }) => {
+const FriendMobile = ({ name, username, event }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const isMenuOpen = Boolean(anchorEl);
 
@@ -47,6 +47,7 @@ const FriendMobile = ({ name, username }) => {
         menuId={menuId}
         isOpen={isMenuOpen}
         closeHandler={handleMenuClose}
+        event={event}
       />
     </Fragment>
   );

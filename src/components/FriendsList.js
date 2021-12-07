@@ -2,11 +2,15 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Friend from "./Friend";
 
-const FriendsList = ({ data }) => {
+const FriendsList = ({ data, heightspace }) => {
   return (
     <Grid
       container
-      sx={{ height: "75vh", overflow: "scroll", px: { md: 2, lg: 5, xl: 10 } }}
+      sx={{
+        height: heightspace,
+        overflow: "scroll",
+        px: { md: 2, lg: 5, xl: 10 },
+      }}
     >
       <Grid item sm={4} key={"1grid"}>
         {data?.map(

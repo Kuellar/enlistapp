@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 import PersonOffIcon from "@mui/icons-material/PersonOff";
 import PersonRemoveIcon from "@mui/icons-material/PersonRemove";
 
-const MenuFriend = ({ anchorEl, menuId, isOpen, closeHandler }) => {
+const MenuFriend = ({ anchorEl, menuId, isOpen, closeHandler, event }) => {
   return (
     <Menu
       anchorEl={anchorEl}
@@ -26,19 +26,23 @@ const MenuFriend = ({ anchorEl, menuId, isOpen, closeHandler }) => {
           <ListItemText>Ver Perfil</ListItemText>
         </MenuItem>
       </NavLink>
-      <Divider />
-      <MenuItem onClick={closeHandler}>
-        <ListItemIcon>
-          <PersonRemoveIcon fontSize="small" color="warning" />
-        </ListItemIcon>
-        <ListItemText>Eliminar</ListItemText>
-      </MenuItem>
-      <MenuItem onClick={closeHandler}>
-        <ListItemIcon>
-          <PersonOffIcon fontSize="small" color="warning" />
-        </ListItemIcon>
-        <ListItemText>Bloquear</ListItemText>
-      </MenuItem>
+      {!event && (
+        <Fragment>
+          <Divider />
+          <MenuItem onClick={closeHandler}>
+            <ListItemIcon>
+              <PersonRemoveIcon fontSize="small" color="warning" />
+            </ListItemIcon>
+            <ListItemText>Eliminar</ListItemText>
+          </MenuItem>
+          <MenuItem onClick={closeHandler}>
+            <ListItemIcon>
+              <PersonOffIcon fontSize="small" color="warning" />
+            </ListItemIcon>
+            <ListItemText>Bloquear</ListItemText>
+          </MenuItem>
+        </Fragment>
+      )}
     </Menu>
   );
 };

@@ -130,7 +130,7 @@ const Friends = () => {
           <FriendsListMobile data={filteredFriends} />
         </Box>
         <Box sx={{ display: { xs: "none", sm: "block" } }}>
-          <FriendsList data={filteredFriends} />
+          <FriendsList data={filteredFriends} heightspace={"75vh"} />
         </Box>
       </Box>
     </Box>
