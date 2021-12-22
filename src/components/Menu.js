@@ -6,7 +6,6 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import GroupIcon from "@mui/icons-material/Group";
 import PersonIcon from "@mui/icons-material/Person";
-import LogoutIcon from "@mui/icons-material/Logout";
 import { NavLink } from "react-router-dom";
 import Divider from "@mui/material/Divider";
 import EventIcon from "@mui/icons-material/Event";
@@ -61,20 +60,6 @@ const Menu = ({ setOpen }) => {
         ))}
       </List>
       <Divider />
-      <List>
-        <NavLink
-          to="/"
-          style={{ textDecoration: "none", color: "black" }}
-          key="logout"
-        >
-          <ListItem button>
-            <ListItemIcon>
-              <LogoutIcon />
-            </ListItemIcon>
-            <ListItemText primary="Cerrar sesión" />
-          </ListItem>
-        </NavLink>
-      </List>
     </Box>
   );
 };

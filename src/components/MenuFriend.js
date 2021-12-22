@@ -1,5 +1,6 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Menu from "@mui/material/Menu";
+import Box from "@mui/material/Box";
 import MenuItem from "@mui/material/MenuItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
@@ -27,7 +28,7 @@ const MenuFriend = ({ anchorEl, menuId, isOpen, closeHandler, event }) => {
         </MenuItem>
       </NavLink>
       {!event && (
-        <Fragment>
+        <Box>
           <Divider />
           <MenuItem onClick={closeHandler}>
             <ListItemIcon>
@@ -41,7 +42,7 @@ const MenuFriend = ({ anchorEl, menuId, isOpen, closeHandler, event }) => {
             </ListItemIcon>
             <ListItemText>Bloquear</ListItemText>
           </MenuItem>
-        </Fragment>
+        </Box>
       )}
     </Menu>
   );
