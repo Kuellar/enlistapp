@@ -12,8 +12,6 @@ import FriendProfile from "./components/pages/FriendProfile";
 import Profile from "./components/pages/Profile";
 import Layout from "./components/Layout";
 import { blueGrey, deepOrange } from "@mui/material/colors";
-import Login from "./components/pages/Login";
-import Signup from "./components/pages/Signup";
 import CreateEvent from "./components/pages/CreateEvent";
 
 const theme = createTheme({
@@ -37,8 +35,6 @@ ReactDOM.render(
             <Route path="friends" element={<Friends />} />
             <Route path="friend" element={<FriendProfile />} />
           </Route>
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
           <Route
             path="*"
             element={

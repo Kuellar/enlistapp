@@ -5,14 +5,12 @@ import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-import { Link as LinkMui } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Copyright from "../Copyright";
 import { Link } from "react-router-dom";
-import Logo from "../../images/logo.png";
+import Logo from "../images/logo.png";
 
 const Signup = () => {
   return (
@@ -20,7 +18,6 @@ const Signup = () => {
       <CssBaseline />
       <Box
         sx={{
-          marginTop: 8,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -100,16 +97,8 @@ const Signup = () => {
               Regístrate
             </Button>
           </Link>
-          <Grid container justifyContent="flex-end">
-            <Grid item>
-              <LinkMui href="#/login" variant="body2">
-                ¿Ya tiene una cuenta? Iniciar sesión
-              </LinkMui>
-            </Grid>
-          </Grid>
         </Box>
       </Box>
-      <Copyright sx={{ mt: 5 }} />
     </Container>
   );
 };

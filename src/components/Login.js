@@ -6,13 +6,11 @@ import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import { Link as LinkMui } from "@mui/material";
-import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Copyright from "../Copyright";
 import { Link } from "react-router-dom";
-import Logo from "../../images/logo.png";
+import Logo from "../images/logo.png";
 
 // import { useTheme } from "@mui/material/styles";
 
@@ -23,7 +21,6 @@ const Login = () => {
       <CssBaseline />
       <Box
         sx={{
-          marginTop: 8,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -72,19 +69,11 @@ const Login = () => {
               Iniciar sesión
             </Button>
           </Link>
-          <Grid container>
-            <Grid item xs>
-              <LinkMui variant="body2">¿Olvidaste tu contraseña?</LinkMui>
-            </Grid>
-            <Grid item>
-              <LinkMui href="#/signup" variant="body2">
-                "¿No tienes una cuenta? Regístrate"
-              </LinkMui>
-            </Grid>
-          </Grid>
+          <Box sx={{ textAlign: "right" }}>
+            <LinkMui variant="body2">¿Olvidaste tu contraseña?</LinkMui>
+          </Box>
         </Box>
       </Box>
-      <Copyright sx={{ mt: 8, mb: 4 }} />
     </Container>
   );
 };
